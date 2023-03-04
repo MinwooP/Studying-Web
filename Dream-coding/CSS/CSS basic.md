@@ -174,7 +174,7 @@ div {
 
 => 하지만 `<div> 1 </div>` 이렇게 안에 내용을 넣으면, `span` 태그와 마찬가지로 `inline`이 되어서 보여진다. `inline` 이라는 것은 내용 자체만을 꾸며주는 것. 
 
-=> `inline` 이란, 우리가 css에서 width나 height을 정의한 것은 무시하고, content의 크기에 맞추어서 element의 크기가 변경되는 것.
+=> `inline`이란, 우리가 css에서 width나 height을 정의한 것은 무시하고, content의 크기에 맞추어서 element의 크기가 변경되는 것.
 
 vs `inline-block`은 `inline`처럼 한 줄에 여러 개의 element들을 위치시키지만, block 단위로 변환되어서 태그 안의 content의 크기와는 상관없이 우리가 지정한 box의 `width`와 `height`에 맞추어서 크기가 정해지는 것.  
 
@@ -213,7 +213,7 @@ css에서 지정된 `position` 의 기본 value는 `static`이다.
 
    => 설정된 left와 top 등의 값에 따라 위치가 결정됨.  
 
-   > 원래 있어야 하는 자리 : 원래 기존 position의 value가 static 이었을 때 element들이 있어야 하는 자리 => html에 정의된 순서대로 배치되어 있어야 하는 자리
+   > 원래 있어야 하는 자리 : 원래 기존 position의 value가 static 이었을 때 element가 있어야 하는 자리 => html에 정의된 순서대로 배치되어 있어야 하는 자리
 
 3. **absolute** 
 
@@ -297,7 +297,7 @@ position이나 float, table을 이용해서 layout을 구성했음.
 
 Flex-box의 2가지 특징 
 
-1. container, 즉 box에 적용되는 속성 값들이 존재하고, 각각의 item 들에게 적용될 수 있는 속성 값도 존재한다. 
+1. container, 즉 box에 적용되는 속성 값들이 존재하고, 각각의 item들에게 적용될 수 있는 속성 값도 존재한다. 
 
 + **container**에게 적용되는 속성 값들
   + `display` 
@@ -484,6 +484,10 @@ flex-box 안에 만약 item들이 더 많이 있다면, item들이 자동적으�
 + `justify-content: space-evenly;`
 
   => spacing을 양 옆 중간 모두 같은 크기로 넣어줌
+  
++ `justify-content: space-between;`
+
+  => 아이템들을 양 끝에 배치해줌.
 
  <br>
 
@@ -566,4 +570,6 @@ item별로 각 item들을 정렬 가능
 
 
 
-https://flexboxfroggy.com/#ko
++ flex box 게임 : https://flexboxfroggy.com/#ko
+
++ CSS flex 정리 : https://studiomeal.com/archives/197

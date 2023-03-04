@@ -12,13 +12,13 @@ js에도 class가 추가되었지만, java 언어처럼 pure한 object oriented�
 
 => 무슨 뜻 일까 ? 
 
-어쨋든, js는 **procedural language**이다. 
+어쨋든, Js는 **procedural language**이다. 
 
-=> 그래서 js에서 function은 굉장히 중요한 역할을 하기 때문에, function을 sub-program이라고도 부른다. 
+=> 그래서 Js에서 function은 굉장히 중요한 역할을 하기 때문에, function을 sub-program이라고도 부른다. 
 
 <br><br>
 
-#### 함수의 정의
+#### 📌 함수의 정의
 
 ```javascript
 // 1. Function declaration
@@ -46,7 +46,7 @@ js에는 type이 없다 ?
 
 <br><br>
 
-#### 파라미터
+#### 📌 파라미터
 
 함수에 전달되는 parameter 중 premitive type 같은 경우는 메모리에 value가 그대로 저장되어 있기 때문에 value가 전달이 되고, object 같은 경우는 메모리에 reference가 저장되기 때문에, reference가 전달이 된다. 
 
@@ -68,7 +68,7 @@ console.log(ellie);
 
 <br><br>
 
-#### Default Parameters (added in ES6)
+#### 📌 Default Parameters (added in ES6)
 
 ```javascript
 // 3. Default parameters
@@ -76,7 +76,7 @@ function showMessage(message, from){
     if(from === undefined){
         from = 'unknown';
     }
-    console.log(`${message} by ${from}`);
+    console.log(`${message} by ${from}`);	
 }
 showMessage('Hi!');
 ```
@@ -94,12 +94,12 @@ showMessage('Hi!');
 
 <br><br>
 
-#### Rest Parameters 
+#### 📌 Rest Parameters 
 
 ```javascript
 // 4. Rest parameters 
 function printAll(...args){
-    for( let i=0;i<args.length;i++){
+    for(let i=0;i<args.length;i++){
         console.log(args[i]);
     }
 }
@@ -110,7 +110,7 @@ printAll('dream', 'coding', 'ellie');
 
 <br><br>
 
-#### Local scope
+#### 📌 Local scope
 
 > 밖에서는 안이 보이지 않고, 안에서만 밖을 볼 수 있다. 
 
@@ -118,7 +118,7 @@ printAll('dream', 'coding', 'ellie');
 
 <br><br>
 
-#### Return a value
+#### 📌 Return a value
 
 함수들은 기능을 수행한 다음 값을 return 할 수 있음. 
 
@@ -221,7 +221,7 @@ console.log(sumAgain(1, 3));
 
 + a function declaration can be called earlier than it is defined. (hoisted)
 
-  => 일반적인 함수 정의는 코드 순서상으로 그 함수가 정의되기 전에 호출이 가능하다.
+  => 일반적인 함수 정의는 코드 순서상으로 그 함수가 정의되기 전에 호출이 가능하다. 죽, 함수의 정의가 맨 밑에 있어도 그 위에서 함수를 호출 가능. 
 
   => javascript engine이 함수 선언을 맨 위로 올려주기 때문 
 
@@ -276,7 +276,7 @@ randomQuiz('wrong', printYes, printNo);
 
 ##### Arrow function
 
-함수를 굉장히 간결하게 만들어 줌. 
+함수 표현식을 굉장히 간결하게 만들어 줌. 
 
 항상 익명함수임.  
 
