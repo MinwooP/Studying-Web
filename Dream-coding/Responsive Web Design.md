@@ -45,7 +45,7 @@ Fixed-width Layout 보다는, Fluid Layout으로 디자인하라.
 
 ```
 
-이렇게 float과 % value를 이용해서 많이 구현했었는데,  
+이렇게 float과 `%` value를 이용해서 많이 구현했었는데,  
 
 요즘에는 layout, box를 만들 때 고정된 px value를 사용하지 않고,  
 

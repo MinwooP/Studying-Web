@@ -4,23 +4,19 @@ class vs object
 
 모든 사물과 물체들을 class로 정의할 수 있는 능력을 갖자 ! 
 
-
-
 만약 js에 class나 object가 없다면 우리가 정의한 변수들은 둥둥 떠다녀서 규모가 있는 프로젝트를 진행하기에 어려움
 
-class는 조금 더 연관있는 data를 한 곳에 묶어놓는 container 같은 것.
-
-
+***class는 조금 더 연관있는 data를 한 곳에 묶어놓는 container 같은 것.**
 
 쇼핑몰을 만들 때, 수강신청 페이지를 만들 때 어떻게 클래스를 설계해야 하는지 생각해보자. 
 
-
+<br>
 
 ## Class
 
-#### class란
+#### Class vs Object
 
-클래스는 붕어빵을 만들 수 있는 틀이다.
+Class는 붕어빵을 만들 수 있는 틀이다.
 
 + template
 + declare once
@@ -253,3 +249,5 @@ A object가 B class의 instance인지 아닌지, 즉, A가 B를 통해 만들어
 `console.log(triangle instanceof Object)`  => true
 
 => 우리가 js에서 만드는 모든 class들은 `Object`를 상속받은 것.
+
+------
