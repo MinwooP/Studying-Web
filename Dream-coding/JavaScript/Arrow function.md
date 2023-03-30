@@ -85,7 +85,7 @@ showMessage('Hi!');
 
 ```javascript
 function showMessage(message, from ='unknown'){
-    console.log('${message by ${from}');
+    console.log('${message} by ${from}');
 }
 showMessage('Hi!');
 ```
@@ -167,7 +167,7 @@ function upgradeUser(user){
 // can be returned by another function 
 ```
 
-함수는 다른 변수와 마찬가지로 변수에 할당이 되고, 다른 함수의 인자로 전달이 되며, 다른 함수의 return 값으로도 사용이 가능하다. 
+함수는 다른 변수와 마찬가지로 **변수에 할당**이 되고, **다른 함수의 인자로 전달**이 되며, **다른 함수의 return 값**으로도 사용이 가능하다. 
 
 이를 가능하게 하는 것이 => Funtion expression : 함수 표현식 
 
@@ -181,7 +181,7 @@ const print = function() {
 }
 ```
 
-함수를 선언함과 동시에 변수에 함수를 할당하는 것을 볼 수 있다. 
+함수를 선언함과 동시에 **변수에 함수를 할당**하는 것을 볼 수 있다. 
 
 이렇게 function의 이름은 선언하지 않고, `function`이라는 키워드와 파라미터와 body만 정의
 
@@ -221,9 +221,9 @@ console.log(sumAgain(1, 3));
 
 + a function declaration can be called earlier than it is defined. (hoisted)
 
-  => 일반적인 함수 정의는 코드 순서상으로 그 함수가 정의되기 전에 호출이 가능하다. 죽, 함수의 정의가 맨 밑에 있어도 그 위에서 함수를 호출 가능. 
+  => 일반적인 함수 정의는 코드 순서상으로 그 함수가 정의되기 전에 호출이 가능하다. 즉, 함수의 정의가 맨 밑에 있어도 그 위에서 함수를 호출 가능. 
 
-  => javascript engine이 함수 선언을 맨 위로 올려주기 때문 
+  => ***javascript engine이 함수 선언을 맨 위로 올려주기 때문*** 
 
 + a function expression is created when the execution reaches it
 
@@ -237,7 +237,7 @@ console.log(sumAgain(1, 3));
 
 함수를 인자로 전달해서,
 
-"너가 상황에 맞으면 전달된 함수를 불러 ! " 라고 전달하는 것을 call back funtion이라고 한다. 
+"***너가 상황에 맞으면 전달된 함수를 불러*** ! " 라고 전달하는 것을 call back function이라고 한다. 
 
 <br>
 
@@ -325,7 +325,7 @@ Immediately Invoked Funtion Expression
 
 => 
 
-함수의 선언을 괄호로 묶은 다음 함수를 호출하듯이 끝에 `();` 더해주면 함수가 호출됨.
+함수의 선언을 괄호 `()`로 묶은 다음 함수를 호출하듯이 끝에 `();` 더해주면 함수가 호출됨.
 
 ```javascript
 (function hello(){
