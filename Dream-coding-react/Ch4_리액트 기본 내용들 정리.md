@@ -155,7 +155,7 @@ export default function AppProfile() {
 
 ```react
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+root.render( 
   <React.StrictMode>
     <AppProfile />
   </React.StrictMode>
@@ -164,7 +164,7 @@ root.render(
 
 <br><br>
 
-#### Props 사용하기
+## 🚩Props 사용하기
 
 ```react
 export default function Profile({image, name, title, isNew}) {
@@ -198,13 +198,13 @@ export default function AppProfile() {
 }
 ```
 
-+ 컴포넌트에 속성으로 원하는 key 와 value를 명시하면, `props`라는 객체로 전달된다. 
++ 컴포넌트 호출 시, 속성으로 원하는 key 와 value를 명시하면, `props`라는 객체로 전달된다. 
 
 + `isNew`가 true일 때만 `span` 태그가 보일 수 있도록 설정한다. 
 
 <br>
 
-#### Component 더 잘게 쪼개기
+## 🚩 Component 더 잘게 쪼개기
 
 Profile에 쓰이는 img를 Avatar Component로 나누기
 
@@ -239,11 +239,11 @@ export default function Avatar({ image, isNew }) {
 
 <br><br>
 
-#### Event 처리하기
+## 🚩Event 처리하기
 
 ```react
 export default function AppProfile() {
-  const handleClick (event) => {
+  const handleClick = (event) => {
     console.log(event);
     alert('버튼이 클릭됨!');
   }
@@ -261,9 +261,9 @@ export default function AppProfile() {
 
 <br>
 
-#### 내부 상태 관리 State
+## 🚩 내부 상태 관리 State
 
-리액트에서는 UI와 밀접하게 관련이 있는 변수들은 state 라는 곳에 보관 해줘야 함.
+리액트에서는 UI와 밀접하게 관련이 있는 변수들은 **state** 라는 곳에 보관 해줘야 함.
 
 => 일반 로컬 변수로는 실시간으로 변화를 UI 상에서 보여줄 수 없음
 
@@ -306,7 +306,7 @@ export default function Counter() {
 
 다시 호출되면, 다시 반환되는 `return( ~ )`부분에서는  업데이트 된 `count`값이 들어가므로 UI가 전체적으로 업데이트 된다. 
 
-=> 함수가 전달받는 props이 변경되거나 내부의 useState의 상태가 변경되면(`setCount`가 호출되면), 변경된 해당 컴포넌트 함수 전체를 다시 호출한다. 그래서 다시 return ( ) 부분에 있는 돔 요소가 생기는데, 다만 리액트에서는 가상의 돔 요소를 사용하기 때문에 이전의 돔 요소에서 변경된 부분만 업데이트 해준다 ! 
+=> 함수가 전달받는 ***props이 변경되거나 내부의 useState의 상태가 변경되면(`setCount`가 호출되면), 변경된 해당 컴포넌트 함수 전체를 다시 호출***한다. 그래서 다시 return ( ) 부분에 있는 돔 요소가 생기는데, 다만 리액트에서는 가상의 돔 요소를 사용하기 때문에 이전의 돔 요소에서 변경된 부분만 업데이트 해준다 ! 
 
 <br><br>
 
@@ -433,11 +433,11 @@ export default function Counter({total, onClick}) {
 
 => 
 
-컴포넌트를 만들어나갈 때, 컴포넌트들 사이에서 공유되는 공통적인 데이터는 필요하고 제일 근접한 부모 컴포넌트 안에 정의하고, 필요한 자식들에게 `props`로 전달해주고, 자식 컴포넌트를 클릭했을 때, 이 부모 컴포넌트안의 데이터가 변경되길 원한다면, 그 데이터의 값을 변경하는 함수역시 `props`으로 전달해주면 된다. 
+컴포넌트를 만들어나갈 때, 컴포넌트들 사이에서 공유되는 공통적인 데이터는 필요하고 제일 근접한 부모 컴포넌트 안에 정의하고, 필요한 자식들에게 `props`로 전달해주고, 자식 컴포넌트를 클릭했을 때, 이 부모 컴포넌트안의 데이터가 변경되길 원한다면, 그 데이터의 값을 변경하는 함수역시 콜백함수로 `props`으로 전달해주면 된다. 
 
 <br><br>
 
-#### useEffect 생애주기
+## 🚩useEffect 생애주기
 
 `AppProducts.jsx`
 
@@ -493,7 +493,7 @@ export default function Products() {
 
 Products() 컴포넌트 함수가 실행이 되면서 state를 초기화해준 다음에 `fetch()`를 통해 데이터를 받아오면, `setProducts()`를 이용해 `products`의 값을 업데이트해준다. 
 
-=> 이렇게 state가 업데이트되면, 리액트는 상태가 변경된 컴포넌트의 함수를 리액트가 다시 호출한다. 
+=> 이렇게 state가 업데이트되면, 상태가 변경된 컴포넌트의 함수를 리액트가 다시 호출한다. 
 
 => `useState(0);` 혹은 `useState([]);`로 초기화 된 state들은 리액트 자체적으로 값을 기억하고 있으므로 다시 초기화하진 않지만, 컴포넌트 함수가 다시 호출되니까 fetch()도 다시 호출되고, 데이터를 다시 받아오고, 다시 `setProducts() `를 실행하고, 리액트가 다시 호출하는 무한 루프
 
@@ -501,7 +501,7 @@ Products() 컴포넌트 함수가 실행이 되면서 state를 초기화해준 �
 
 => 
 
-이러한 무한 루프를 막을려면 컴포넌트가 보여질 때 한번만  네트워크 통신을 통해 데이터를 받아오고, 그 뒤로는 네트워크를 요청하지 않게 만들어야 함.
+이러한 무한 루프를 막을려면 컴포넌트가 보여질 때 한번만  네트워크 통신을 통해 데이터를 받아오고, 그 뒤로는 네트워크를 요청하지 않게 만들어야 함(한번만 fetch 해야 함)
 
 => 
 
@@ -533,11 +533,67 @@ useEffect(()=>{
 
 
 
+컴포넌트가 처음 mount 되었을 때, 네트워크 통신을 할 때도 있지만 어떤 특정한 값이 변경될 때 다시 네트워크 요청을 해야할 때가 있다. 
+
+```react
+export default function Products() {
+  const [products, setProducts] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => setChecked((prev) => !prev);
+  
+  useEffect(() => {
+    fetch(`data/${checked ? 'sale_' : ''}products.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("데이터를 네트워크에서 받아옴");
+        setProducts(data);
+      });
+
+    return () => {
+      console.log("깨끗하게 청소했습니다.");
+    };
+  }, [checked]);
+
+  return (
+    <>
+      <input type="checkbox" value={checked} onChange={handleChange} />
+      <label htmlFor='checkbox'>Show Only HOT Sale</label>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <article>
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+`useEffect()`의 dependency를 넣어주는 부분에 `checked`를 넣어주면, 이 값이 바뀔 때마다 `useEffect()`의 첫번째 인자인 콜백함수를 다시 실행한다.
+
+
+
+=> `useEffect()`은 컴포넌트를 작성할 때, 처음으로 무언가 네트워크 통신을 받아오거나 처음으로 무거운 일을 처리해야 하는게 있으면 유용하다. 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+## 🚩 참고
 
 > JSX란 ?
 >
