@@ -4,17 +4,13 @@
 
 `cd react`
 
-`yarn create react-all basic`
+`yarn create react-app basic`
 
+기본으로 만들어지는 폴더들, 파일들이 있음
 
++ public 폴더 => 정적인 리소스 
 
-
-
-기본으로 만들어지는 폴더들, 파일들
-
-public => 정적인 리소스 
-
-src => 동적인 소스
++ src => 동적인 소스
 
 
 

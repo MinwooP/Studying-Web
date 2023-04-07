@@ -54,7 +54,7 @@ root 에 첫번째로 `App` component를 렌더링한다.
 
 주의할 점
 
-1. JSX를 return시 하나의 태그만 반환해야 함 ! 그 안에 자식태그는 여러개 있어도 되는데 제일 상위의 태그는 하나여야 함.
+1. JSX를 return시 **하나의 태그**만 반환해야 함 ! 그 안에 자식태그는 여러개 있어도 되는데 제일 상위의 태그는 하나여야 함.
 
    => 만약 부모태그는 필요하지 않고 다수의 태그를 반환하고 싶다면 상위에 `<>자식 태그들 </>` 이렇게 비어있는 태그를 반환하면 됨.  
 
@@ -70,7 +70,7 @@ root 에 첫번째로 `App` component를 렌더링한다.
 
 <br>
 
-3. javascript 코드를 작성할 때는 중괄호 `{}`를 이용해야 함.
+3. JSX 코드 내부에서 javascript 코드를 작성할 때는 중괄호 `{}`를 이용해야 함.
 
 ```react
 function App() {
@@ -198,7 +198,7 @@ export default function AppProfile() {
 }
 ```
 
-+ 컴포넌트 호출 시, 속성으로 원하는 key 와 value를 명시하면, `props`라는 객체로 전달된다. 
++ 컴포넌트 호출 시, 속성으로 원하는 **key 와 value를 명시**하면, `props`라는 객체로 전달된다. 
 
 + `isNew`가 true일 때만 `span` 태그가 보일 수 있도록 설정한다. 
 
@@ -259,6 +259,10 @@ export default function AppProfile() {
       /> 
 ```
 
++ 각 JSX 태그의 속성에 `onClick = { }`를 써주면 된다. 
+
+
+
 <br>
 
 ## 🚩 내부 상태 관리 State
@@ -306,7 +310,7 @@ export default function Counter() {
 
 다시 호출되면, 다시 반환되는 `return( ~ )`부분에서는  업데이트 된 `count`값이 들어가므로 UI가 전체적으로 업데이트 된다. 
 
-=> 함수가 전달받는 ***props이 변경되거나 내부의 useState의 상태가 변경되면(`setCount`가 호출되면), 변경된 해당 컴포넌트 함수 전체를 다시 호출***한다. 그래서 다시 return ( ) 부분에 있는 돔 요소가 생기는데, 다만 리액트에서는 가상의 돔 요소를 사용하기 때문에 이전의 돔 요소에서 변경된 부분만 업데이트 해준다 ! 
+=> 함수가 전달받는 ***props이 변경되거나 내부의 useState의 상태가 변경되면(`setCount`가 호출되면), 변경된 해당 컴포넌트 함수 전체를 다시 호출***한다. 그래서 다시 return ( ) 부분에 있는 돔 요소가 생기는데, 다만 리액트에서는 가상의 돔 요소를 사용하기 때문에 **이전의 돔 요소에서 변경된 부분만 업데이트** 해준다 ! 
 
 <br><br>
 
@@ -350,17 +354,17 @@ onClick이 호출되었을 때 전달되는 이 콜백함수는  콜백함수가
 >
 ```
 
-
+ <br>
 
 => 
 
-무언가 여러번 호출이되거나, 이전 값을 사용해야 하거나, 예상하지 못한 순간에 비동기적으로 set을 하게 된다면,
+무언가 여러번 호출이 되거나, 이전 값을 사용해야 하거나, 예상하지 못한 순간에 비동기적으로 set을 하게 된다면,
 
 스냅샷 된 시간이 좀 지난 변수의 값을 기억하고 있을 수 있으므로  
 
 그냥 `setState()` 에서 전달되는 이전 상태 값을 사용하는게 더 안전하다. 
 
-
+ <br>
 
 #### 자식 컴포넌트에게 state 전달, 부모에게 state 전달
 
@@ -368,9 +372,9 @@ onClick이 호출되었을 때 전달되는 이 콜백함수는  콜백함수가
 
 다음과 같은 UI를 만들고 싶다
 
-=> Total count가 관리되고, 하단이 2개의 박스에서도 각각의 count와 total count가 함께 관리된다.
+=> Total count가 관리되고, 하단의 2개의 박스에서도 각각의 count와 total count가 함께 관리된다.
 
-
+<br>
 
 `AppCounter.jsx`
 
@@ -456,7 +460,7 @@ export default function AppProducts() {
 
 AppProducts에는 `<Products>` 컴포넌트를 보여주는 부분과 클릭하면 state인 `showProducts` 의 값을 toggling 할 수 있는 `button`이 있다. 
 
-
+<br>
 
 `Products.jsx`
 
@@ -491,13 +495,13 @@ export default function Products() {
 }
 ```
 
-Products() 컴포넌트 함수가 실행이 되면서 state를 초기화해준 다음에 `fetch()`를 통해 데이터를 받아오면, `setProducts()`를 이용해 `products`의 값을 업데이트해준다. 
+`Products()` 컴포넌트 함수가 실행이 되면서 state를 초기화해준 다음에 `fetch()`를 통해 데이터를 받아오면, `setProducts()`를 이용해 `products`의 값을 업데이트해준다. 
 
 => 이렇게 state가 업데이트되면, 상태가 변경된 컴포넌트의 함수를 리액트가 다시 호출한다. 
 
 => `useState(0);` 혹은 `useState([]);`로 초기화 된 state들은 리액트 자체적으로 값을 기억하고 있으므로 다시 초기화하진 않지만, 컴포넌트 함수가 다시 호출되니까 fetch()도 다시 호출되고, 데이터를 다시 받아오고, 다시 `setProducts() `를 실행하고, 리액트가 다시 호출하는 무한 루프
 
-
+<br>
 
 => 
 
