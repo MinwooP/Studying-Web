@@ -16,7 +16,7 @@
 
 ## <div align="center">HTML</div>
 
-🎖 [HTML BASIC](./Dream-coding-HTML,CSS,JS/HTML/HTML_BASIC.md)
+🎖 [HTML BASIC](./Dream-coding-HTML_CSS_JS/HTML/HTML_BASIC.md)
 
 🎖 [HTML 태그 정리](./Dream-coding-HTML,CSS,JS/HTML/HTML_태그_정리.md)
 
@@ -86,7 +86,7 @@
 
 ## <div align="center">React</div>
 
-🎖 [CH2 리액트란](./Dream-coding-react/CH2_리액트란.md)
+🎖 [CH2_리액트란](./Dream-coding-react/CH2_리액트란.md)
 
 🎖 [CH3_개발환경설정](./Dream-coding-react/CH3_개발환경설정.md)
 
