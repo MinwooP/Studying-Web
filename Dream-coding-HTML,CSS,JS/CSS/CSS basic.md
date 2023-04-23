@@ -134,7 +134,7 @@ margin => content 밖에 들어가는 spacing
 
 웹 사이트를 만들 때 가장 중요한 것은 ? 
 
-=> 우리가 만들려는 box들을 원하는 위치에, 원하는 크기로 배치할 수 있는 것
+=> 우리가 만들려는 box들을 원하는 위치에, 원하는 크기로 배치할 수 있는 것.
 
 => 이를 위해서는 **display**와 **position**을 잘 알아야 함.	
 
@@ -144,11 +144,13 @@ margin => content 밖에 들어가는 spacing
 
 `<div> ` => block level
 
-`<span>` => inline level 	
+`<span>` => inline level
 
 ![image-20230206230850687](C:\Users\alsd2\AppData\Roaming\Typora\typora-user-images\image-20230206230850687.png)
 
 이렇게 `div`는 기본적으로 block level (`display: block;`)이라서 한 줄에 하나씩 나오고, `span`은 기본적으로 inline-level (`display: inline;`) 이기 때문에 한 줄에 공간이 충분하면 여러 개가 동시에 나옴.
+
+> 그럼 span 태그는 inline 요소이므로 width, height을 80px로 설정해도 이게 적용이 되지 않음 ?
 
 => 하지만 이 기본값은 CSS를 통해 변경이 가능함.
 
@@ -195,7 +197,7 @@ vs `inline-block`은 `inline`처럼 한 줄에 여러 개의 element들을 위�
 > }
 > ```
 >
-> 이렇게 css 파일에 정의된 `div`나 `span` 태그의 `width`나 `height` 속성의 값은 content의 크기를 의미하는 것이 아니라 `div`나 `span`이 정의하는 element 전체의 크기를 의미한다. 
+> 이렇게 css 파일에 정의된 `div`나 `span` 태그의 `width`나 `height` 속성의 값은 content의 크기를 의미하는 것이 아니라 `div`나 `span`이 정의하는 ***element 전체의 크기***를 의미한다. 
 
 <br>
 
@@ -300,23 +302,55 @@ Flex-box의 2가지 특징
 1. container, 즉 box에 적용되는 속성 값들이 존재하고, 각각의 item들에게 적용될 수 있는 속성 값도 존재한다. 
 
 + **container**에게 적용되는 속성 값들
-  + `display` 
-  + `flex-direction`
+  
+  + `display`  : flex 로 설정하면, 해당 컨테이너는 flex-box로 지정
+  
+  + `flex-direction` => 중심축을 어떤 방향으로 할지 => 기본값:  row
+  
+    => 아이템을 세로로 정렬하고 싶으면 `column`으로 설정하면 됨. 
+  
   + `flex-wrap`
-  + `flex-flow`
-  + `justify-content`
-  + `align-items`
+  
+     `flex-wrap: wrap`으로 바꾸게 되면 item들이 한 줄에 꽉 차게 되면 자동으로 다음 줄로 item들이 넘어감 
+  
+  + `flex-flow` => direction과 wrap을 한번에 쓸 수 있음 => 중요x
+  
+  + `justify-content `=> 중심축을 아이템들을 어떻게 배치할지
+  
+    flex-direction이 row이면, 우선 아이템들을 가로로 정렬할 건데
+  
+    + flex-start: 기본값으로, 왼쪽 => 오른쪽으로 배치 
+    + center : 가운데로 모아줌.
+  
+  + `align-items`=>중심축을 기준으로 아이템을 어떻게 배치할지
+  
+    
+  
   + `align-content`
-
-+  **item**에게 적용되는 속성 값들
+  
++ **item**에게 적용되는 속성 값들
 
   + `order`
+
   + `flex-grow`
+
+    `1`로 설정한다면, container가 커질 때, 아이템들도 커져서 container를 꽉 채움 
+
+    `0` => container가 커져도 item들은커지지 않음
+
   + `flex-shrink`
+
+    `1` => container가 작아지면, item도 같이 작아짐
+
+    `0 `=> container가 작아지면, item은 작아지지 않음 
+
   + `flex`
+
   + `align-self`
 
-  <br>
+=>  flexbox의 전체적인 정렬과 흐름 속성은 부모인 flex container에서 정의하고, 크기나 순서에 관련된 속성은 자식 요소에 해당하는 flex-item에서 정의합니다.
+
+<br>
 
 2. flex-box에는 중심축과 반대축(중심축에 수직을 이루는 축)이 있다.
 
@@ -358,7 +392,7 @@ demo를 통해 알아보자
 
 + `height: 100%` 
 
-  해당 element가 들어있는 부모의 높이에 100%로 채우겠다는 의미
+  해당 element가 들어있는 **부모의 높이에 100%로 채우겠다**는 의미
 
   => 현재 `container`의 부모는 `<body>` 이므로, `<body>`의 높이에 100%로 채우겠다는 뜻
 
@@ -459,7 +493,7 @@ flex-box 안에 만약 item들이 더 많이 있다면, item들이 자동적으�
 
 => ***중심축을 기준으로*** 아이템들을 어떻게 배치할지를 결정하는 것.
 
-+ `justify-content: flex-start;`
++ `justify-content: flex-start;` => 기본값 ?
 
   => 수평축이 중심축이라면 왼쪽=>오른쪽으로 item들 배치
 
@@ -495,19 +529,25 @@ flex-box 안에 만약 item들이 더 많이 있다면, item들이 자동적으�
 
 => ***반대축을 기준으로*** 아이템들을 어떻게 배치할지를 결정하는 것.
 
++ `align-items: stretch` (기본값)
+
+  => 아이템들이 수직축 방향으로 끝까지 쭈욱 늘어납니다.
+
 + `align-items: center;`
 
   => 반대축의 중심에 item들을 배치 
 
 + `align-items: baseline;`
 
-  => item들의 content(ex) text) 들이 수평으로 보여질 수 있도록 
+  => 아이템들을 텍스트 베이스라인 기준으로 정렬합니다.
 
  <br>
 
 `align-content`
 
-`justify-content` 는 중심축을 기준으로 아이템들을 배치한다면, `align-content;`는 반대축을 기준으로 아이템들을 배치
+=> `flex-warp : wrap;`이 설정된 상태에서, 아이템들의 행이 2줄 이상 되었을 때의 수직축 방향 정렬을 결정하는 속성이다. 
+
+`justify-content` 는 중심축을 기준으로 아이템들을 배치한다면, `align-content;`는 반대축을 기준으로 아이템들을 배치한다.
 
  <br>
 
@@ -556,11 +596,17 @@ flex-box 안에 만약 item들이 더 많이 있다면, item들이 자동적으�
 
 `flex-basis`
 
+=> flex item의 기본 크기를 결정하는 속성
+
 => item들이 공간을 얼마나 차지해야 하는지
+
+=> flex-basis 속성의 값을 auto로 설정하면 flex item은 상대적 flex item(relative flex item)이 되어 콘텐츠의 크기를 기준으로 크기가 결정됩니다.
 
  <br>
 
-`align-self`
+![image-20230411195942515](C:\Users\alsd2\AppData\Roaming\Typora\typora-user-images\image-20230411195942515.png)
+
+​	
 
 item별로 각 item들을 정렬 가능
 
@@ -572,4 +618,10 @@ item별로 각 item들을 정렬 가능
 
 + flex box 게임 : https://flexboxfroggy.com/#ko
 
-+ CSS flex 정리 : https://studiomeal.com/archives/197
++ CSS flex 정리 
+
+  https://studiomeal.com/archives/197
+
+  https://narup.tistory.com/210
+
+  

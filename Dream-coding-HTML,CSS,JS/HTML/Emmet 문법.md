@@ -16,9 +16,9 @@ div에 class할당 => div.class_name
 
 .class_name 만해도 => div 태그가 만들어진다. 
 
-<br>
+<br><br>
 
-**부모, 자식, 형제 노드**
+### **부모, 자식, 형제 노드**
 
 div>ul>li
 
@@ -76,11 +76,9 @@ div>ul>li^ol
 </div>
 ```
 
-<br>
+<br><br>
 
-
-
-**그룹화하기**
+### **그룹화하기**
 
 ```html
 <div>
@@ -100,17 +98,17 @@ div>ul>li^ol
 
 => div>(header>ul>li*2>a)+footer>p
 
+<br><br>
 
-
-**텍스트 입력하기**
+### **텍스트 입력하기**
 
 p{hello}
 
 => `<p>hello</p>`
 
+<br><br>
 
-
-**자동 번호 넣기**
+### **자동 번호 넣기**
 
 p.class${item $}*5
 
@@ -124,9 +122,9 @@ p.class${item $}*5
 <p class="class5">item 5</p>
 ```
 
+<br><br>
 
-
-**더미용 텍스트 생성**
+### **더미용 텍스트 생성**
 
 p>lorem
 
@@ -136,7 +134,7 @@ p>lorem
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore repellat ab accusamus amet aliquam nihil earum ipsa, eius inventore ipsum maiores alias unde harum cumque officia magnam praesentium. Facere.</p>
 ```
 
-
+<br>
 
 p>lorem4
 

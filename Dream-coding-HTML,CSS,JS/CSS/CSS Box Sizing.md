@@ -1,3 +1,5 @@
+# CSS content의 크기, BOX Sizing
+
 CSS로 스타일링 할 때, 
 
 "사이즈가 이상한데?"
@@ -44,7 +46,7 @@ CSS로 스타일링 할 때,
     <div class="box box1">
         <div class="inner"></div>
     </div>
-
+	
     <h3>Box with padding</h3>
     <div class="box box2">
         <div class="inner"></div>
@@ -119,6 +121,18 @@ content의 width, height 100px과 padding 20px은 변하지 않고 border만 외
 ```html
 <head>
      <style>
+         .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .inner{
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+
         .box2{
             padding: 20px;
             box-sizing: content-box;
@@ -132,6 +146,23 @@ content의 width, height 100px과 padding 20px은 변하지 않고 border만 외
         }
     </style>
 </head>
+
+<body>
+    <h3>Box without padding</h3>
+    <div class="box box1">
+        <div class="inner"></div>
+    </div>
+	
+    <h3>Box with padding</h3>
+    <div class="box box2">
+        <div class="inner"></div>
+    </div>
+
+    <h3>Box with padding, border box</h3>
+    <div class="box box3"> 
+        <div class="inner"></div>
+    </div>
+</body>
 ```
 
 ![image-20230220132234023](C:\Users\alsd2\AppData\Roaming\Typora\typora-user-images\image-20230220132234023.png)
@@ -148,4 +179,35 @@ content의 width, height 100px과 padding 20px은 변하지 않고 border만 외
 
 그리고 우리가 통상적으로 padding을 넣는 것은 box안의 여백을 만들기 위함이기 때문에
 
-대부분은 border-box를 이용해서 사용하게 된다 ! 
+**대부분은 border-box를 이용**해서 사용하게 된다 ! 
+
+
+
+
+
+### 정리
+
+width, height은 box의 크기를 지정하는 것인데, 
+
+content-box 
+
+=> content만 box에 포함하고, border,padding은 box 밖의 영역으로 생각
+
+=> width와 height은 content의 크기를 조정
+
+
+
+border-box
+
+=> content, border, padding 까지 box안의 영역으로 생각
+
+=> width와 height은 content, border, padding의 크기를 모두 합친 것
+
+
+
+
+
+## 참고
+
+https://velog.io/@nalsae/%EB%82%B4%EB%B3%B4%EC%A0%95CSS-%EB%AA%A8%EB%A5%B4%EB%A9%B4-%EA%B3%A4%EB%9E%80%ED%95%9C-box-sizing
+

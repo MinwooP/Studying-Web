@@ -533,9 +533,7 @@ useEffect(()=>{
 2.  이 컴포넌트가 없어질 때(unmount) 무언가 정리를 해야한다면(메모리 or 소켓 네트워크 통신 닫기) `useEffect()`의 첫번째 인자로 전달되었던 함수 안에서 그 정리하는 역할의 함수를 return 해주면 된다. 
 3. dependency 자리에 텅빈 배열인 `[]`을 전달하게 되면 아무런 dependency가 전달되지 않기 때문에 컴포넌트가 처음에 보여질 때만 useEffect에 등록된 콜백함수가 호출이 될 것. 
 
-
-
-
+<br><br>
 
 컴포넌트가 처음 mount 되었을 때, 네트워크 통신을 할 때도 있지만 어떤 특정한 값이 변경될 때 다시 네트워크 요청을 해야할 때가 있다. 
 
@@ -579,23 +577,11 @@ export default function Products() {
 
 `useEffect()`의 dependency를 넣어주는 부분에 `checked`를 넣어주면, 이 값이 바뀔 때마다 `useEffect()`의 첫번째 인자인 콜백함수를 다시 실행한다.
 
-
+<br>
 
 => `useEffect()`은 컴포넌트를 작성할 때, 처음으로 무언가 네트워크 통신을 받아오거나 처음으로 무거운 일을 처리해야 하는게 있으면 유용하다. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><br><br>
 
 ## 🚩 참고
 
@@ -611,11 +597,3 @@ export default function Products() {
 
 > + Mount : DOM 객체가 생성되고 브라우저에 나타나는 것
 > + UnMount : 컴포넌트가 DOM에서 제거되는 것
-
-
-
-
-
-js 배열 map 함수
-
-js fetch 함수

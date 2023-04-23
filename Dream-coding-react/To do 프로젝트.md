@@ -4,17 +4,17 @@
 
 `yarn create react-app basic`
 
-
+<br>
 
 `App.css` 내용 다 삭제
 
 src에 `Components` 라는 폴더 만들기
 
-
+<br>
 
 컴포넌트별 jsx파일 + css파일(post css를 쓸 것이므로) => 한번에 묶어서 패키지 형태로 관리해줄 것임.
 
-
+<br>
 
 `App.js`에 이제 컴포넌트 시작 
 
@@ -30,7 +30,9 @@ export default function App() {
 
 
 
-### 기능구현
+
+
+## 기능구현
 
 ##### 할일 목록
 
@@ -56,7 +58,7 @@ onChage를 통해 value값이 변경되면 `handleChange` 함수를 실행시켜
 
 `form`의 `onSubmit`을 통해 button이 클릭되어서 정보가 전송되면 `handleSubmit`함수를 실행실행시켜줄 수 있음. 
 
-
+​	
 
 
 
@@ -108,11 +110,17 @@ Todo 객체 하나에 이제 체크박스도 들어가야 하고, 삭제버튼�
 
 
 
-### 스타일링
+## 스타일링
+
+postCSS => create-React-app으로 프로젝트를 만들면, 자동으로 들어있음
+
+
+
+
 
 순수 post CSS를 사용할 때도, 색상은 변수로 정의해두는 것이 좋음
 
-`index.css`
+`index.css ` => 프로젝트 전반적인 스타일링 css 코드 여기에 정의 
 
 ```css
 :root {
@@ -124,11 +132,11 @@ Todo 객체 하나에 이제 체크박스도 들어가야 하고, 삭제버튼�
 }
 ```
 
-
+<br>
 
 ```css
 body {
-  margin: 0;
+  margin: 0
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -139,13 +147,13 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 ```
 
 아이템들의 위치를 중간으로 오도록 
 
-
+<br>
 
 https://cssgradient.io/ 에서 그라데이션을 만들어 body에 적용
 
@@ -156,7 +164,7 @@ body {
 }
 ```
 
-
+<br>
 
 `body`의 바로 자식인 `root` 꾸며주기 
 
@@ -178,17 +186,13 @@ body {
 
 https://cssgenerator.org/box-shadow-css-generator.html 에서 그림자 생성
 
+<br>
 
+=> `index.css`에서 `body`와 `root`에 대한 스타일링을 작성해주었다. 
 
-=> `index.css`에서 `body`와 `root`에 대한 스타일링을 작성해주었다. 보통 프로젝트 전반적인 스타일링을 여기 작성해주면 될 듯.   
-
-
-
-
+<br><br>
 
 `overflow: hidden;` => 자식이 부모 요소를 침범하지 않도록?
-
-
 
 
 
@@ -202,6 +206,78 @@ className={`${styles.filter} ${filter === value && styles.selected}` }
 
 
 
+#### 입력 폼 스타일링
+
+`TodoList.jsx`에서 section 안의 To do list들을 표시하는 `ul`은 중간에 두고, 새로운 to do를 입력하는 `AddTodo`는 하단에 위치시키고 싶다.
+
+post CSS를 사용하기 위해 
+
+` <section className={styles.container}>` 이런식으로 className에 styles 붙이기 ?
+
+
+
+```css
+* { 
+  box-sizing: border-box;
+}
+```
+
+모든 item들이 padding 이나 이런게 합해진 size로 계산이 되도록
+
+​	
+
+```css
+.button {
+    cursor: pointer;
+}
+
+
+.button:hover {
+    filter: brightness(125%)
+}
+```
+
+버튼에 마우스가 올라갔을 때, 손바닥 모양으로 바뀌도록, 전체적으로 버튼이 좀 더 환해지도록 
+
+
+
+
+
+```css
+.icon {
+    transition: all 150ms ease-out;
+}
+```
+
+icon의 변화가 모두 조금씩 천천히 이루어지도록 
+
+
+
+
+
+checkbox 디자인 
+
+=> accent color를 통해 해결 가능 
+
+`index.css`
+
+```css
+body {
+    accent-color: var(--color-accent);
+}
+```
+
+이렇게 body에 accent color를 지정하면, 어떤 input을 사용하든, 기본 브라우저 UI 대신 accent color를 적용해달라고 명시해줄 수 있음
+
+
+
+
+
+스크롤바 디자인 => 8.15강 후반부 참고
+
+
+
+### 투두 아이템 저장 => 로컬 스토리지
 
 
 
@@ -209,6 +285,39 @@ className={`${styles.filter} ${filter === value && styles.selected}` }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```css
+.text{
+    flex: 1 1 0%;
+}
+```
+
+grow, shrink 이거 머누 ?
 
 
 
@@ -235,8 +344,7 @@ className={`${styles.filter} ${filter === value && styles.selected}` }
   ex) 각 페이지에서 식재료 현황 받아오기
 
 ```react
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react"
 
 export default function useProducts({salesOnly}) { // 커스텀 훅
     const [loading, setLoading] = useState(false);
@@ -247,7 +355,6 @@ export default function useProducts({salesOnly}) { // 커스텀 훅
     useEffect(() => {
         setLoading(true);
         setError(undefined);
-    
     
         fetch(`data/${salesOnly ? 'sale_' : ''}products.json`)
           .then((res) => res.json())
@@ -290,6 +397,20 @@ const [todos, setTodos] = useState([
 
 
 
+
+
+메인페이지에서 화면에 식재료 item들을 배치할 때, 
+
+냉장고 3단 전체를 flex contatiner로 설정하고, 
+
+`justify-content: flex-start;` 로 설정해 기본 방향을 왼쪽 => 오른쪽으로 설정하고 
+
+`flex-wrap: wrap;`로 설정해 5개 이상 아이템이 있으면 자동으로 다음 줄로 넘어가도록
+
+=> 대신 아이템들의 크기는 일정하게 지정을 해줘야 할듯? 그래야 5개가 다 차면 다음줄로 자동으로 넘어가도록
+
+
+
 #### 식재료 입력 받기 
 
 무언가를 입력받을 때,  `form` 태그와 그 안에 `input` 태그와 `button` 태그 사용 
@@ -319,16 +440,14 @@ setText(''); // input 태그에 입력된 값 없애줌.
 > => 서버에서 식재료 현황 새로 받아오기 
 >
 > => UI 새로 업데이트
->
-> 이런 플로우로 진행되어야 하나? 
 
 
+
+> 이런 플로우로 진행되어야 하나? 아니면 로컬 UI에 먼저 추가하고 그 다음 서버에 추가 요청 ?
 
 
 
 #### 식재료 삭제 
-
-
 
 
 
