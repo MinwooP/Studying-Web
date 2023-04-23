@@ -70,11 +70,11 @@
 
 🎖 [버튼 클릭 시, 특정 요소들 필터링해서 보여주기](./Dream-coding-HTML,CSS,JS/JavaScript/버튼_클릭_시,_특정_요소들_필터링해서_보여주기.md)
 
-🎖 [스크롤 시, 특정 요소 점점 투명해지도록](./Dream-coding-HTML,CSS,JS/JavaScript/스크롤 시,_특정_요소_점점_투명해지도록.md)
+🎖 [스크롤 시, 특정 요소 점점 투명해지도록](./Dream-coding-HTML,CSS,JS/JavaScript/스크롤_시,_특정_요소_점점_투명해지도록.md)
 
 🎖 [스크롤을 맨 위로 올려주는 버튼 만들기](./Dream-coding-HTML,CSS,JS/JavaScript/스크롤을_맨_위로_올려주는_버튼_만들기.md)
 
-🎖 [콘솔 출력, script defer](./Dream-coding-HTML,CSS,JS/JavaScript/콘솔 출력,_script_defer.md)
+🎖 [콘솔 출력, script defer](./Dream-coding-HTML,CSS,JS/JavaScript/콘솔_출력,_script_defer.md)
 
 🎖 [투명한 Navbar 만들기](./Dream-coding-HTML,CSS,JS/JavaScript/투명한_Navbar_만들기.md)
 
