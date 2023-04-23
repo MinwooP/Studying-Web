@@ -86,9 +86,9 @@
 
 ## <div align="center">React</div>
 
-🎖 [CH2 리액트란](./ream-coding-react/ch2_리액트란.md)
+🎖 [CH2 리액트란](./dream-coding-react/ch2_리액트란.md)
 
-🎖 [CH3_개발환경설정](./Dream-coding-react/ch3_개발환경설정.md)
+🎖 [CH3_개발환경설정](./Dream-coding-react/CH3_개발환경설정.md)
 
 🎖 [CH4_리액트 기본 내용들 정리](./Dream-coding-react/ch4_리액트_기본_내용들_정리.md)
 
