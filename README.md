@@ -86,7 +86,7 @@
 
 ## <div align="center">React</div>
 
-🎖 [CH2 리액트란](./Dream-coding-react/ch2_리액트란.md)
+🎖 [CH2 리액트란](./ream-coding-react/ch2_리액트란.md)
 
 🎖 [CH3_개발환경설정](./Dream-coding-react/ch3_개발환경설정.md)
 
