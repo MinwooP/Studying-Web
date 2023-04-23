@@ -16,7 +16,7 @@
 
 ## <div align="center">HTML</div>
 
-🎖 [HTML BASIC](./HTML/HTML BASIC.md)
+🎖 [HTML BASIC](./HTML/HTML-BASIC.md)
 
 🎖 [HTML 태그 정리](./Dream-coding-HTML,CSS,JS/HTML/HTML_태그_정리.md)
 
