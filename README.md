@@ -20,9 +20,9 @@
 
 [HTML 태그 정리](./HTML/HTML%20태그%20정리.md)
 
-🎖 [Emmet 문법](./HTML/Emmet%20문법.md)
+[Emmet 문법](./HTML/Emmet%20문법.md)
 
-🎖 [data attributes](./HTML/data%20attributes.md)
+[data attributes](./HTML/data%20attributes.md)
 
 -----
 
