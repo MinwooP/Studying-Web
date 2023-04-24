@@ -16,9 +16,9 @@
 
 ## <div align="center">HTML</div>
 
-🎖 [HTML BASIC](./HTML/HTML%20BASIC.md)
+[HTML BASIC](./HTML/HTML%20BASIC.md)
 
-🎖 [HTML 태그 정리](./HTML/HTML%20태그%20정리.md)
+[HTML 태그 정리](./HTML/HTML%20태그%20정리.md)
 
 🎖 [Emmet 문법](./HTML/Emmet%20문법.md)
 
