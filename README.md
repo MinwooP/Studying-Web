@@ -16,7 +16,7 @@
 
 ## <div align="center">HTML</div>
 
-[HTML BASIC](./HTML/HTML BASIC.md)
+[HTML BASIC](./HTML/HTML-BASIC.md)
 
 [HTML 태그 정리](./HTML/HTML 태그 정리.md)
 
