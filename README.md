@@ -50,7 +50,7 @@
 
 ## <div align="center"> JavaScript</div>
 
-[JavaScript의 역사와 미래](./JavaScript/Javascript의%20역사와 미래.md)
+[JavaScript의 역사와 미래](./JavaScript/Javascript의%20역사와%20미래.md)
 
 [JavaScript Data Type](./JavaScript/Javascript%20Data%20Type.md)
 
