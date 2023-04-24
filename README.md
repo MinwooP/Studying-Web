@@ -16,13 +16,13 @@
 
 ## <div align="center">HTML</div>
 
-🎖 [HTML BASIC](./HTML/HTML-BASIC.md)
+🎖 [HTML BASIC](./HTML/HTML%20BASIC.md)
 
-🎖 [HTML 태그 정리](./Dream-coding-HTML,CSS,JS/HTML/HTML_태그_정리.md)
+🎖 [HTML 태그 정리](./HTML/HTML%20태그%20정리.md)
 
-🎖 [Emmet 문법](./Dream-coding-HTML,CSS,JS/HTML/Emmet 문법.md)
+🎖 [Emmet 문법](./HTML/Emmet%20문법.md)
 
-🎖 [data attributes](./Dream-coding-HTML,CSS,JS/HTML/data_attributes.md)
+🎖 [data attributes](./HTML/data%20attributes.md)
 
 -----
 
