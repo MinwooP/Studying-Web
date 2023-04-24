@@ -16,21 +16,21 @@
 
 ## <div align="center">HTML</div>
 
-[HTML BASIC](./HTML/HTML-BASIC.md)
+[HTML BASIC](./HTML/HTML%20BASIC.md)
 
-[HTML 태그 정리](./HTML/HTML 태그 정리.md)
+[HTML 태그 정리](./HTML/HTML%20태그%20정리.md)
 
-[Emmet 문법](./HTML/Emmet 문법.md)
+[Emmet 문법](./HTML/Emmet%20문법.md)
 
-[data attributes](./HTML/data attributes.md)
+[data attributes](./HTML/data%20attributes.md)
 
 -----
 
 ## <div align="center">CSS</div>
 
-[CSS BASIC](./CSS/CSS basic.md)
+[CSS BASIC](./CSS/CSS%20basic.md)
 
-[CSS Display](./CSS/CSS Display.md)
+[CSS Display](./CSS/CSS%20Display.md)
 
 [CSS Position](./CSS/CSS Position.md)
 
