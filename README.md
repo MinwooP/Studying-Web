@@ -20,7 +20,7 @@
 
 🎖 [HTML 태그 정리](./Dream-coding-HTML,CSS,JS/HTML/HTML_태그_정리.md)
 
-🎖 [Emmet 문법](./Dream-coding-HTML,CSS,JS/HTML/Emmet_문법.md)
+🎖 [Emmet 문법](./Dream-coding-HTML,CSS,JS/HTML/Emmet 문법.md)
 
 🎖 [data attributes](./Dream-coding-HTML,CSS,JS/HTML/data_attributes.md)
 
