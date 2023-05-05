@@ -36,7 +36,7 @@ const arr2 = [1, 2];
 
 ```javascript
 // 2. Index position
-const fruis = ['apple'. 'banana'];
+const fruits = ['apple'. 'banana'];
 console.log(fruits);
 console.log(fruits.length);
 console.log(fruits[0]);

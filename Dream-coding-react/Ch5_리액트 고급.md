@@ -1,6 +1,6 @@
 # 리액트 고급내용들
 
-
+<br>
 
 ## 마우스 커서 따라 동그라미 따라오도록
 
@@ -27,7 +27,7 @@ export default function AppXY() {
   );
 ```
 
-
+<br>
 
 서로 연관이 있는 데이터는 같이 묶어서 관리하는 게 좋음
 
@@ -44,13 +44,13 @@ const [position, setPosition] = useState({x:0, y:0});
     > 
 ```
 
-
+<br>
 
 > setState와 prev
 >
 > https://velog.io/@rlaclgns321/setState-%EC%99%80-prev
 
- 
+ <br>
 
 ## 중첩 객체 상태 관리
 
@@ -82,7 +82,7 @@ setPerson을 들여다보면, 우선 `...prev`를 통해  기존 `person`  state
 >
 > https://cocobi.tistory.com/156
 
-
+<br>
 
 -----
 
@@ -90,41 +90,31 @@ setPerson을 들여다보면, 우선 `...prev`를 통해  기존 `person`  state
 
 원칙적으로 리액트에서 state는 불변성을 유지해야 한다. 
 
-
-
-
+<br>
 
 > for each, map, filter 
 >
 > https://paperblock.tistory.com/59
 
-
-
-
+<br>
 
 > 자바스크립트 const
 
 > 배열 push 
 
-
-
-
+<br><br>
 
 리액트 상태 관리를 위한 리액트 hook
 
 Context API => 컴포넌트 간의 공유되는 state 관리 
 
-​	
-
-
+<br><br>
 
 ### Reducer
 
 `const [person, dispatch] = useReducer(personReducer, initialPerson);`
 
-
-
-
+<br><br>
 
 ### Immer
 
@@ -132,21 +122,21 @@ Reducer를 쓰더라도 중첩된 객체가 많을 수록 계속 안으로 들�
 
 => 이를 위해 Immer 라이브러리
 
-
+<br>
 
 불변성 상태의 트리를 손쉽게 변경하게 해준다. 
 
-
+<br>
 
 일반 object를 업데이트 하는 것처럼 사용하지만 immer 내부적으로는 별도의 객체를 만들어서, 원하는 부분만 업데이트해줌. 
 
-
+<br>
 
 설치 방법
 
 =>cmd 창에 `yarn add immer use-immer`
 
-
+<br>
 
 이제 새로운 객체를 만들고 중첩된 걸 업데이트 해줄 필요 없이
 
@@ -154,15 +144,13 @@ Reducer를 쓰더라도 중첩된 객체가 많을 수록 계속 안으로 들�
 
 `updatePerson((person) => person.mentors.push({ name, title }));`
 
-
+<br>
 
 우리가 복잡한 상태를 관리하지 않는다면 굳이 immer까지 설치할 필요는 없겠지만,
 
 어플리케이션에 중첩되고 중첩된 객체가 있다면 이를 좀 더 직관적을 사용하고 싶다면, immer를 사용하는게 좋음. 
 
-
-
-
+<br><br>
 
 ### Form을 만드는 법
 
@@ -179,7 +167,7 @@ return (
 
 `e.preventDefault();`를 실행함으로써 `form`이 제출되었을 때, 페이지가 refresh 되지 않도록 한다. 
 
-
+<br>
 
 리액트의 철학 => 모든 UI의 업데이트는 상태 변경으로부터 발생해야 한다. 
 
@@ -199,7 +187,7 @@ export default function AppForm() {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFrom({ ...form, [name]: value });
   };
   
@@ -227,11 +215,7 @@ export default function AppForm() {
 }
 ```
 
-<br>
-
-
-
-
+<br><br>
 
 ### 컴포넌트 재사용성
 
@@ -241,7 +225,7 @@ Wrap - components
 
 이는 그 열린태그의 props로 전달되어, 그 태그 내부 component로 사용할 수 있게 된다. 
 
-
+<br>
 
 EX1) Navbar
 
@@ -284,15 +268,11 @@ function Avatar({ image, name, size }) {
 }
 ```
 
-
+<br>
 
 EX2) Card
 
-
-
-
-
-
+<br>
 
 ### Context
 
@@ -304,21 +284,17 @@ data를 Context에 담고 있고, Provider를 통해 data를 잘 보여주는 �
 
 Provider도 컴포넌트 => 하위 컴포넌트를 감싸줄 수 있는 부모 우산 컴포넌트
 
-
+<br>
 
 ### 성능개선
 
 예전에 비해 많이는 신경쓰지 않아도 됨.
 
-
+<br>
 
 리액트는 외부로부터 주입받는 props와 내부 상태 state가 있는데, props와 state 둘 중 하나만 변경이 되어도, 함수형 컴포넌트는 전체가 다시 호출이 됨. 
 
-
-
-
-
-
+<br><br>
 
 ### 로딩, 에러 처리를 위한 커스텀 훅
 
@@ -384,13 +360,13 @@ export default function useProducts({salesOnly}) { // 커스텀 훅
 }
 ```
 
-
+<br>
 
 커스텀 훅은 리액트 컴포넌트와 비슷한데 함수로 만들어야하고, use라는 키워드를 사용해야 하고, 일반 컴포넌트처럼 useState, useEffect, useCallback, useMemo 사용할 수 있지만
 
 UI 컴포넌트는 UI를 반환하지만, 커스텀 훅은 우리가 원하는 데이터를 반환하면 됨.  
 
-
+<br>
 
 > Hooks는 (함수들은)
 >
@@ -398,9 +374,7 @@ UI 컴포넌트는 UI를 반환하지만, 커스텀 훅은 우리가 원하는 �
 
 => 커스텀 훅에서 사용되는 데이터는 글로벌로 선언된 것이 아니기 때문에 각 컴포넌트마다 Hooks안의 데이터는 공유되지 않는다. 개별적인 데이터이다. 
 
-
-
-
+<br><br>
 
 ### 클래스 형 컴포넌트
 

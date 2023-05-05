@@ -181,9 +181,7 @@ content의 width, height 100px과 padding 20px은 변하지 않고 border만 외
 
 **대부분은 border-box를 이용**해서 사용하게 된다 ! 
 
-
-
-
+<br><br>
 
 ### 정리
 
@@ -195,7 +193,7 @@ content-box
 
 => width와 height은 content의 크기를 조정
 
-
+<br>
 
 border-box
 
@@ -203,9 +201,7 @@ border-box
 
 => width와 height은 content, border, padding의 크기를 모두 합친 것
 
-
-
-
+<br><br>
 
 ## 참고
 

@@ -12,7 +12,7 @@ src에 `Components` 라는 폴더 만들기
 
 <br>
 
-컴포넌트별 jsx파일 + css파일(post css를 쓸 것이므로) => 한번에 묶어서 패키지 형태로 관리해줄 것임.
+컴포넌트별 jsx파일 + css파일(post css를 쓸 것이므로) => 한번에 묶어서 패키지 형태로 관리해줄 것임.	
 
 <br>
 
@@ -28,17 +28,15 @@ export default function App() {
 }
 ```
 
+<br>
 
-
-
+<br>
 
 ## 기능구현
 
 ##### 할일 목록
 
-
-
-
+<br>
 
 ##### 할일 추가하기
 
@@ -54,13 +52,11 @@ export default function App() {
 
 위의 코드를 통해 할일을 입력받는 input과, 전송할 수 있는 버튼 ui를 만들 수 있음
 
-onChage를 통해 value값이 변경되면 `handleChange` 함수를 실행시켜줄 수 있음
+onChange를 통해 value값이 변경되면 `handleChange` 함수를 실행시켜줄 수 있음
 
 `form`의 `onSubmit`을 통해 button이 클릭되어서 정보가 전송되면 `handleSubmit`함수를 실행실행시켜줄 수 있음. 
 
-​	
-
-
+<br><br>
 
 ##### 고유한 id 만들기
 
@@ -79,15 +75,13 @@ import {v4 as uuidv4} from 'uuid'
 }
 ```
 
-
-
-
+<br><br>
 
 ##### 할일 삭제하기
 
 Todo 객체 하나에 이제 체크박스도 들어가야 하고, 삭제버튼도 들어가야 하니 별개의 컴포넌트로 만들어주자 !
 
-
+<br>
 
 휴지통 아이콘
 
@@ -95,9 +89,7 @@ Todo 객체 하나에 이제 체크박스도 들어가야 하고, 삭제버튼�
 
 그 휴지통 버튼 누르면, todos에서 삭제 	
 
-
-
-
+<br>
 
 리액트 아이콘 사용하기
 
@@ -106,17 +98,13 @@ Todo 객체 하나에 이제 체크박스도 들어가야 하고, 삭제버튼�
 2. https://academy.dream-coding.com/courses/player/react/lessons/1436 들어가서 아이콘 검색해서 원하는 아이콘 클릭하면 `FaTrashAlt`가 복사됨.
 3.  쓰려는 jsx 파일 상단에 `import {FaTrashAlt} from 'react-icons/fa'`를 쓰고  `<button><FaTrashAlt/></button> ` 같은 방식으로 쓰면 됨 .
 
-
-
-
+<br><br>
 
 ## 스타일링
 
 postCSS => create-React-app으로 프로젝트를 만들면, 자동으로 들어있음
 
-
-
-
+<br>
 
 순수 post CSS를 사용할 때도, 색상은 변수로 정의해두는 것이 좋음
 
@@ -145,7 +133,7 @@ body {
 
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: flex;	
   justify-content: center;
   align-items: center;
 }
@@ -169,7 +157,7 @@ body {
 `body`의 바로 자식인 `root` 꾸며주기 
 
 ```css
-#root {
+#root 
   width: 100%;
   height: 60%;
   max-width: 500px;
@@ -194,7 +182,7 @@ https://cssgenerator.org/box-shadow-css-generator.html 에서 그림자 생성
 
 `overflow: hidden;` => 자식이 부모 요소를 침범하지 않도록?
 
-
+<br>
 
 ```react
 className={`${styles.filter} ${filter === value && styles.selected}` } 
@@ -202,9 +190,7 @@ className={`${styles.filter} ${filter === value && styles.selected}` }
 
 클래스 이름을 정할 때,  `styles.filter`는 앞에 무조건 쓰고, 뒤에는 현재 전달받은 filter와 각 li의 value값이 같다면 `selected`를 클래스 이름에 덧붙여 쓰도록
 
-
-
-
+<br><br>
 
 #### 입력 폼 스타일링
 
@@ -214,7 +200,7 @@ post CSS를 사용하기 위해
 
 ` <section className={styles.container}>` 이런식으로 className에 styles 붙이기 ?
 
-
+<br>
 
 ```css
 * { 
@@ -224,13 +210,12 @@ post CSS를 사용하기 위해
 
 모든 item들이 padding 이나 이런게 합해진 size로 계산이 되도록
 
-​	
+<br>
 
 ```css
 .button {
     cursor: pointer;
 }
-
 
 .button:hover {
     filter: brightness(125%)
@@ -239,9 +224,7 @@ post CSS를 사용하기 위해
 
 버튼에 마우스가 올라갔을 때, 손바닥 모양으로 바뀌도록, 전체적으로 버튼이 좀 더 환해지도록 
 
-
-
-
+<br>
 
 ```css
 .icon {
@@ -251,9 +234,7 @@ post CSS를 사용하기 위해
 
 icon의 변화가 모두 조금씩 천천히 이루어지도록 
 
-
-
-
+<br><br>
 
 checkbox 디자인 
 
@@ -269,47 +250,15 @@ body {
 
 이렇게 body에 accent color를 지정하면, 어떤 input을 사용하든, 기본 브라우저 UI 대신 accent color를 적용해달라고 명시해줄 수 있음
 
-
-
-
+<br>
 
 스크롤바 디자인 => 8.15강 후반부 참고
 
-
+<br>
 
 ### 투두 아이템 저장 => 로컬 스토리지
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 ```css
 .text{
@@ -317,17 +266,9 @@ body {
 }
 ```
 
-grow, shrink 이거 머누 ?
+grow, shrink ?
 
-
-
-
-
-
-
-
-
-
+<br>
 
 
 
@@ -369,21 +310,18 @@ export default function useProducts({salesOnly}) { // 커스텀 훅
         };
       }, [salesOnly]);
 
-      
     return [loading, error, products];
 }
 ```
 
-
-
-
+<br><br>
 
 ### 메인 페이지
 
 ```react
 const [todos, setTodos] = useState([
         {id: '123', text: '장보기', status: 'active'},
-        {id: '124', text: '공부하기', status: 'active'},
+        {id: '124', text: '공부하기', status: 'active
     ]);
 ```
 
@@ -393,11 +331,7 @@ const [todos, setTodos] = useState([
 
 각 식재료 = `{id: '123', name: '김치', period: '14', 보관일자: ~~, 탄소량: ~~}` 이렇게 저장?
 
-
-
-
-
-
+<br><br>
 
 메인페이지에서 화면에 식재료 item들을 배치할 때, 
 
@@ -409,7 +343,7 @@ const [todos, setTodos] = useState([
 
 => 대신 아이템들의 크기는 일정하게 지정을 해줘야 할듯? 그래야 5개가 다 차면 다음줄로 자동으로 넘어가도록
 
-
+<br>
 
 #### 식재료 입력 받기 
 
@@ -431,7 +365,7 @@ setText(''); // input 태그에 입력된 값 없애줌.
 
 => 아무것도 입력하지 않았거나 공백만 입력했다면 서버로 전송되지 않도록 하기
 
-
+<br>
 
 > 식재료 입력 시,
 >
@@ -441,11 +375,9 @@ setText(''); // input 태그에 입력된 값 없애줌.
 >
 > => UI 새로 업데이트
 
-
-
 > 이런 플로우로 진행되어야 하나? 아니면 로컬 UI에 먼저 추가하고 그 다음 서버에 추가 요청 ?
 
-
+<br><br>
 
 #### 식재료 삭제 
 

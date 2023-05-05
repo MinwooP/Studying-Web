@@ -218,9 +218,7 @@ let nothing = null;
 console.log(`value: ${nothing}, type: ${typeof nothing}`);
 ```
 
-null이라고 할당하는 경우는 
-
-명확하게 텅텅 비어있는 empty 값임을 지정하고 싶을 때,
+null이라고 할당하는 경우는 => 명확하게 텅텅 비어있는 empty 값임을 지정하고 싶을 때,
 
 <br>
 

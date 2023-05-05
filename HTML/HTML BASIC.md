@@ -20,7 +20,7 @@
 
   > mark-up 언어 : 일반적인 텍스트와 구분하기 위해 문서에 annotating 된 것 
 
-
+<br>
 
 ```html
 <!DOCTYPE html>
@@ -46,13 +46,13 @@
 
 > https://ssd0908.tistory.com/entry/HTML-DOCTYPE-%EC%84%A0%EC%96%B8-%EC%9D%98%EB%AF%B8-%EB%B0%8F-%ED%98%84%EC%9E%AC%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80
 
-
+<br>
 
 `<html>`
 
 html 파일 제일 상위에 있는 태그
 
-
+<br>
 
 `<head>`
 
@@ -61,7 +61,7 @@ html 파일 제일 상위에 있는 태그
 + CSS 파일을 연결하는 것도 이 부분에서 진행
 + 사용자에게 보여지는 정보는 없고 **meta-data** 만 있다
 
-
+<br>
 
 ` <meta charset="utf-8">`
 
@@ -69,7 +69,7 @@ html 파일 제일 상위에 있는 태그
 
 + utf-8은 현존하는 모든 사람들이 쓰는 언어를 지원해주기 때문에 기본으로 이걸 사용하면 됨.
 
-
+<br>
 
 `<body>`
 
@@ -79,7 +79,7 @@ html 파일 제일 상위에 있는 태그
 
   => 모든 브라우저들이 W3C 라는 표준을 따르도록 구현되어있기 때문에 
 
- 
+ <br>
 
 >  **W3C** 
 >
