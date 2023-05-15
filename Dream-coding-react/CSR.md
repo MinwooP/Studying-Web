@@ -134,18 +134,7 @@ Multi Page Application
 
 
 
-
-
-
-
 > Fetch도 AJAX의 일종인가 ? 
-
-
 
 > 렌더링과 라우팅의 차이
 
-
-
-
-
-어버이날 

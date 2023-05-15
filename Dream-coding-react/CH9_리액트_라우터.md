@@ -88,3 +88,17 @@ function App(){
 
 ## param 사용하기
 
+
+
+
+
+
+
+
+
+## 참고
+
+https://velog.io/@cgy1024/%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%9D%BC%EC%9A%B0%ED%8C%85-Page-Routing
+
+https://velog.io/@gkfla668/React-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%9D%BC%EC%9A%B0%ED%8C%85%EC%9D%B4%EB%9E%80
+

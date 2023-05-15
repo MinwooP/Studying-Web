@@ -4,7 +4,7 @@
 
 `yarn create react-app basic`
 
-<br>
+<br>	
 
 `App.css` 내용 다 삭제
 
@@ -387,3 +387,4 @@ setText(''); // input 태그에 입력된 값 없애줌.
 
 
 
+6

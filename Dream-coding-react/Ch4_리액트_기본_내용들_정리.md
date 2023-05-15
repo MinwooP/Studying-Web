@@ -22,7 +22,7 @@ html 안에는 거의 비어있고(`div id = root`만 body안에 있고, 다른 
 
 ```react
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render
+root.render();
   <React.StrictMode>
     <App />
   </React.StrictMode>
@@ -168,7 +168,7 @@ root.render(
 
 ```react
 export default function Profile({image, name, title, isNew}) {
-    return (
+    return 
         <div className="profile">
             <img
                 className='photo'
@@ -298,7 +298,7 @@ export default function Counter() {
                 }}
             >
                 Add +
-                </button>
+                </button>	
         </div>
     );
 } 
@@ -312,7 +312,7 @@ export default function Counter() {
 
 <br><br>
 
-#### useState 유의할 점
+#### 📝 useState 유의할 점
 
 ```react
 <button 
